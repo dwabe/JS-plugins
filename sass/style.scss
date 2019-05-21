@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 .main-carousel {
     width: 100%;
     max-width: 1000px;
@@ -18,10 +22,20 @@
             height: 50vh;
             min-height: 250px;
             background-size: cover;
+            p {
+                color: white;
+                position: relative;
+                top: 10px;
+                left: 10px;  
+            }
         }
     }
 }
 
 .flickity-page-dots {
     display: none;
-  }
+}
+
+section > p {
+    text-align: center;
+}

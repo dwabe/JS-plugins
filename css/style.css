@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .main-carousel {
   width: 100%;
   max-width: 1000px;
@@ -24,8 +28,19 @@
   background-size: cover;
 }
 
+.main-carousel .carousel-cell .container p {
+  color: white;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
 .flickity-page-dots {
   display: none;
+}
+
+section > p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
