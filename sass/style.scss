@@ -6,7 +6,7 @@ body {
     font-family: sans-serif;
 }
 
-.main-carousel {
+.carousel {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -48,6 +48,12 @@ body {
             color: rgba(0, 0, 0, 0.7);
         }
     }
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
 }
 
 .flickity-page-dots {

@@ -6,24 +6,24 @@ body {
   font-family: sans-serif;
 }
 
-.main-carousel {
+.carousel {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.main-carousel .carousel-cell {
+.carousel .carousel-cell {
   width: 100%;
   margin-right: 10px;
 }
 
-.main-carousel .carousel-cell .container {
+.carousel .carousel-cell .container {
   height: 50vh;
   min-height: 400px;
   background-size: cover;
 }
 
-.main-carousel .carousel-cell .container p {
+.carousel .carousel-cell .container p {
   font-size: 20px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.7);
@@ -51,6 +51,12 @@ body {
 .reload .reload-button a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
 }
 
 .flickity-page-dots {
