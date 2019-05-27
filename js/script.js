@@ -1,3 +1,25 @@
+'use strict';
+(function(){
+	
+  var template = document.getElementById('template').innerHTML;
+  
+	Mustache.parse(template);
+	
+	var listItems = '';
+
+	
+	for(var i = 0; i < slidesData.length; i++){
+		console.log(slidesData);
+		listItems += Mustache.render(template, slidesData[i]);
+  }
+  
+  var results = document.getElementById('results');
+	
+	results.insertAdjacentHTML('beforeend', listItems);
+	
+})(); 
+
+
 var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
   // options
