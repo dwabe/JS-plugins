@@ -10,33 +10,7 @@
 </head>
 
 <body>
-    <div class="carousel">
-        <div class="carousel-cell" id="carousel-cell1">
-            <div class="container">
-                <div id="results"></div>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell2">
-            <div class="container">
-                <div id="results"></div>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell3">
-            <div class="container">
-                <div id="results"></div>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell4">
-            <div class="container">
-                <div id="results"></div>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell5">
-            <div class="container">
-                <div id="results"></div>
-            </div>
-        </div>
-    </div>    
+    <div class="carousel" id="carousel"></div>    
     <div class="progress">
         <div class="progress-bar"></div>
     </div>
@@ -47,36 +21,35 @@
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
 
     <script id="template" type="x-tmpl-mustache">
-            <h3> {{ title }} </h3>
-            <img src=" {{ image }} "/>
-            <p> {{ description }} </p>
+        {{{ slides }}} {{{ description }}} {{{ title }}}
+        </div>
     </script>
     <script>
         var slidesData = [
             {
-                image: 'images/porsche.jpg', 
-                title: 'Porsche - Stuttgart',
-                description: '<a href="https://www.porsche.com/">Learn about Porsche</a>'
+                image: 'Porsche', 
+                title: '<div class=\"container\"><header>Porsche</header></div>',
+                description: "<div class=\"carousel-cell\" id=\"carousel-cell1\" style=\"background-image: url('images/porsche.jpg');\">"
             },
             {
-                image: 'images/bmw.jpg', 
-                title: 'BMW - Muenchen',
-                description: '<a href="https://www.bmw.com/en/index.html">Learn about BMW</a>'
+                image: 'BMW', 
+                title: '<div class=\"container\"><header>BMW</header></div>',
+                description: "<div class=\"carousel-cell\" id=\"carousel-cell2\" style=\"background-image: url('images/bmw.jpg');\">"
             },
             {
-                image: 'images/audi.jpg', 
-                title: 'Audi - Ingolstadt',
-                description: '<a href="https://www.audi.com/en.html">Learn about Audi</a>'
+                image: 'Audi', 
+                title: '<div class=\"container\"><header>Audi</header></div>',
+                description: "<div class=\"carousel-cell\" id=\"carousel-cell3\" style=\"background-image: url('images/audi.jpg');\">"
             },
             {
-                image: 'images/mini.jpg', 
-                title: 'Mini - Oxford',
-                description: '<a href="https://www.mini.com/en_MS/home.html">Learn about Mini</a>'
+                image: 'Mini', 
+                title: '<div class=\"container\"><header>Mini</header></div>',
+                description: "<div class=\"carousel-cell\" id=\"carousel-cell4\" style=\"background-image: url('images/mini.jpg');\">"
             },
             {
-                image: 'images/mercedes.jpg', 
-                title: 'Mercedes - Stuttgart',
-                description: '<a href="https://www.mercedes-benz.com/en/">Learn about Mercedes</a>'
+                image: 'Mercedes', 
+                title: '<div class=\"container\"><header>Mercedes</header></div>',
+                description: "<div class=\"carousel-cell\" id=\"carousel-cell5\" style=\"background-image: url('images/mercedes.jpg')\">"
             }
         ];
     </script>

@@ -13,9 +13,13 @@
 		listItems += Mustache.render(template, slidesData[i]);
   }
   
-  var results = document.getElementById('results');
+  var fullSlidesList = Mustache.render(template, {
+    slides: listItems
+  });
+
+  var results = document.getElementById('carousel');
 	
-	results.insertAdjacentHTML('beforeend', listItems);
+	results.insertAdjacentHTML('beforeend', fullSlidesList);
 	
 })(); 
 
