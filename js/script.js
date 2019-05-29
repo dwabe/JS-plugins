@@ -1,25 +1,29 @@
 'use strict';
-
+var markers = [];
 (function(){ 
     
   window.initMap = function() {
-		 
 		var map = new google.maps.Map(document.getElementById('map'), {
 		  zoom: 5,
 			center: slidesData[0].coords
     });
+
     
-    var markers = [];
 
-    for(var n=0; n < slidesData.length; n++){
-
-      markers[n] = new google.maps.Marker({ 
+    for(var n=0; n < slidesData.length; n++) {
+      var marker = new google.maps.Marker({ 
         position: slidesData[n].coords,
         map: map
-      }); 
-    }
-  }	
-	 
+      });
+      markers.push(slidesData[n].coords);
+    };
+      
+    google.maps.event.addListener(marker, 'click', function() {
+        event.preventDefault();
+        map.panTo(markers[n]);
+        map.setZoom(10);
+      });
+    };
 })();  
 
 
