@@ -8,22 +8,21 @@ var markers = [];
 			center: slidesData[0].coords
     });
 
-    
-
-    for(var n=0; n < slidesData.length; n++) {
-      var marker = new google.maps.Marker({ 
-        position: slidesData[n].coords,
+    slidesData.forEach(element => {
+      var marker = new google.maps.Marker({
+        position: element.coords,
         map: map
       });
-      markers.push(slidesData[n].coords);
-    };
-      
-    google.maps.event.addListener(marker, 'click', function() {
+      markers.push(element.coords);
+      google.maps.event.addListener(marker, 'click', function() {
         event.preventDefault();
-        map.panTo(markers[n]);
+        map.panTo(element.coords);
         map.setZoom(10);
       });
-    };
+    });
+      
+    
+  };
 })();  
 
 
