@@ -33,7 +33,7 @@
   "homepage": "https://github.com/dwabe/solo-project-1#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "axios": ">=0.18.1",
+    "axios": ">=0.21.1",
     "browser-sync": "^2.26.7",
     "lodash": ">=4.17.19",
     "node-sass": "^4.13.1",
